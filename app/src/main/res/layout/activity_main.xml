@@ -8,7 +8,7 @@
     android:background="@drawable/animation_list"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,10 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="280dp"
             android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/transparent_logo"
             />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -29,11 +28,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainIV"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_below="@+id/mainIV"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
             android:src="@drawable/ic_baseline_add_a_photo_24"
             android:backgroundTint="@color/teal_700"
             />
@@ -49,27 +46,10 @@
             android:textStyle="bold"
             style="@style/TextAppearance.AppCompat.Headline"
             android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainFAB"
+            android:layout_below="@id/mainFAB"
+            android:layout_centerHorizontal="true"
             />
 
-        <Switch
-            android:id="@+id/mainSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainTV"
-            android:text="Contains text?"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_marginTop="18dp"
-            tools:ignore="UseSwitchCompatOrMaterialXml"
-            />
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/mainChipGroup"
@@ -80,13 +60,28 @@
             android:layout_marginEnd="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainSwitch"
-            app:layout_constraintVertical_bias="0.1"
+            android:layout_below="@id/mainTV"
+            android:layout_centerHorizontal="true"
             />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/copyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainChipGroup"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/saffron2"
+            android:drawableLeft="@drawable/ic_baseline_copy_all_24"
+            android:text="Copy all hashtags to clipboard"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+    
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
