@@ -12,42 +12,60 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/mainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MyHashtagBuddy"
+            android:textColor="@color/white"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textStyle="bold|italic"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:padding="5dp"
+            />
+
         <ImageView
             android:id="@+id/mainIV"
             android:layout_width="wrap_content"
             android:layout_height="280dp"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
+            android:layout_below="@+id/mainText"
             android:src="@drawable/transparent_logo"
             />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        <ImageButton
             android:id="@+id/mainFAB"
             style="@style/Widget.MaterialComponents.FloatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_below="@+id/mainIV"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_above="@id/noteTV"
             android:layout_centerHorizontal="true"
-            android:padding="10dp"
             android:src="@drawable/ic_baseline_add_a_photo_24"
-            android:backgroundTint="@color/teal_700"
+            android:background="@drawable/rounded_button"
             />
 
         <TextView
-            android:id="@+id/mainTV"
+            android:id="@+id/noteTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Select Image from Gallery"
+            android:layout_marginTop="6dp"
+            android:text="Tap on the camera icon to start generating hashtags"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold"
             style="@style/TextAppearance.AppCompat.Headline"
             android:padding="10dp"
-            android:layout_below="@id/mainFAB"
+            android:layout_above="@id/endTV"
             android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textAlignment="center"
             />
 
 
@@ -60,8 +78,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:layout_below="@id/mainTV"
+            android:layout_below="@id/mainIV"
             android:layout_centerHorizontal="true"
+
             />
 
         <Button
@@ -80,8 +99,17 @@
             android:visibility="gone"
             />
 
-    </RelativeLayout>
-    
+        <TextView
+            android:id="@+id/endTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Made in BU Hack"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            />
 
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,9 +3,9 @@
     <item
         android:drawable="@drawable/gradient_1"
         android:duration="1500" />
-    <item
-        android:drawable="@drawable/gradient_2"
-        android:duration="1500" />
+<!--    <item-->
+<!--        android:drawable="@drawable/gradient_2"-->
+<!--        android:duration="1500" />-->
     <item
         android:drawable="@drawable/gradient_3"
         android:duration="1500"
