@@ -58,5 +58,12 @@ dependencies {
     implementation 'com.google.mlkit:object-detection:16.0.0'
     implementation 'com.google.mlkit:image-labeling:17.0.3'
 
+    //Splashy
+    implementation 'com.rbddevs.splashy:splashy:1.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72+"
+
+    //DynamicToasts
+    implementation 'com.pranavpandey.android:dynamic-toasts:3.3.1'
+
 
 }

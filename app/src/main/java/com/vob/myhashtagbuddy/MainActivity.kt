@@ -19,6 +19,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.label.ImageLabeling
 import com.google.mlkit.vision.label.defaults.ImageLabelerOptions
+import com.pranavpandey.android.dynamic.toasts.DynamicToast
+import com.rbddevs.splashy.Splashy
 import com.vob.myhashtagbuddy.databinding.ActivityMainBinding
 import com.vob.myhashtagbuddy.util.Constants.IMAGE_PICK_CODE
 
@@ -32,13 +34,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSplashy()
+
         copyText = "";
 
-        animationDrawable = binding.main.background as AnimationDrawable
-        animationDrawable.setExitFadeDuration(400)
+//        animationDrawable = binding.main.background as AnimationDrawable
+//        animationDrawable.setExitFadeDuration(400)
 
 
         binding.mainFAB.setOnClickListener {
+            copyText = ""
             pickImage()
         }
 
@@ -53,10 +58,23 @@ class MainActivity : AppCompatActivity() {
                 val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                 val clipData = ClipData.newPlainText("label", copyText)
                 clipboardManager.setPrimaryClip(clipData)
-                Snackbar.make(binding.root,"Copied to clipboard", Snackbar.LENGTH_SHORT).show()
-                copyText = ""
+                DynamicToast.makeSuccess(this,"Copied to clipboard", Toast.LENGTH_SHORT).show()
+
             }
         }
+    }
+
+    private fun setSplashy() {
+        Splashy(this)
+            .setLogo(R.drawable.transparent_logo)
+            .setTitle("MyHashtagBuddy")
+            .setTitleColor("#FFFFFF")
+            .setAnimation(Splashy.Animation.GROW_LOGO_FROM_CENTER)
+            .showProgress(true)
+            .setBackgroundColor(R.color.black)
+            .setDuration(3500L)
+            .setProgressColor("#FFFFFF")
+            .show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -133,6 +151,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        animationDrawable.start()
+
     }
 }
