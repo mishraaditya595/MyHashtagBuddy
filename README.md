@@ -10,6 +10,12 @@
   "MyHashtagBuddy” is an Android application that aims to solve the issue of finding hashtags for your social media uploads.
     <br />
     
+ ## Screenshots 📱
+
+<img src="https://github.com/mishraaditya595/MyHashtagBuddy/blob/master/Images/1617499462133.png" alt="Screenshot" height="350" width="200"/></a>
+<img src="https://github.com/mishraaditya595/MyHashtagBuddy/blob/master/Images/1617499455613.png" alt="Screenshot" height="350" width="200"/></a>
+<img src="https://github.com/mishraaditya595/MyHashtagBuddy/blob/master/Images/1617499469065.png" alt="Screenshot" height="350" width="200"/></a>
+    
 ## License ✅
 
 This project is licensed under BSD 3-Clause "New" or "Revised" License. Check it out [here](https://github.com/mishraaditya595/MyHashtagBuddy/blob/master/LICENSE).
