@@ -7,8 +7,9 @@
   <h3 align="center">MyHashtagBuddy</h3>
   
   <br />
-  "MyHashtagBuddy” is an Android application that aims to solve the issue of finding hashtags for your social media uploads.
-    <br />
+  
+ **MyHashtagBuddy** is an Android application that aims to solve the issue of finding hashtags for your social media uploads.
+ <br />
     
  ## Screenshots 📱
 
